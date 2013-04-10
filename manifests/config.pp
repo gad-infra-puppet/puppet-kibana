@@ -35,7 +35,7 @@ class kibana::config {
       owner   => 'root',
       group   => 'root',
       source  => "puppet:///${kibana::config_file}",
-      notify  => Service['kibana'],
+      notify  => Class['kibana::service'],
     }
 
   }
